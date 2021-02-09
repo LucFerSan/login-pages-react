@@ -3,6 +3,10 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+  :root {
+    font-size: 100%;
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -24,5 +28,11 @@ export const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    :root {
+      font-size: 87.5%;
+    }
   }
 `;

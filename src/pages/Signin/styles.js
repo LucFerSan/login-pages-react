@@ -50,6 +50,11 @@ export const Container = styled.div`
       background: #e23d06;
     }
   }
+
+  @media (max-width: 767px) {
+    width: 20rem;
+    height: 35rem;
+  }
 `;
 
 export const InputContainer = styled.div`
