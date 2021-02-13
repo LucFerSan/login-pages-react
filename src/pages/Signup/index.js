@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { FaSignInAlt, FaUserAlt, FaLock, FaMailBulk } from 'react-icons/fa';
 
@@ -51,7 +52,7 @@ function Signup() {
 
       <Account>
         <p>Already have an account?</p>
-        <a href="/">Sign in now!</a>
+        <Link to="/">Sign in now!</Link>
       </Account>
     </Container>
   );
