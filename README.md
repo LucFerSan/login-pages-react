@@ -63,4 +63,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Lucas Fernandes - fernandes.lucas11@outlook.com
 
-Project Link: [https://github.com/LucFerSan/login-pages-react](https://github.com/LucFerSan/login-pages-react)
+Project Link - live view: [https://react-first-lucas.netlify.app](https://react-first-lucas.netlify.app)
