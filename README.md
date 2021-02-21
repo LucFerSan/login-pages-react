@@ -41,8 +41,8 @@ This is my first project with react, so I decided to build a simple login and re
 ## Usage
 
 <p float="left">
-  <img src=".github/signup.png" width="390" />
-  <img src=".github/signin.png" width="390" /> 
+  <img src=".github/signup.gif" width="390" />
+  <img src=".github/signin.gif" width="390" /> 
 </p>
 
 ## Contributing
