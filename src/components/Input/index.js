@@ -36,6 +36,7 @@ function Input({ name, icon: Icon, ...rest }) {
         ref={inputRef}
         {...rest}
       />
+      {error}
     </Container>
   );
 }

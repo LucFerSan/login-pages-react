@@ -1,5 +1,8 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import * as Yup from 'yup';
+
+import getValidationErrors from '../../utils/getValidationErrors';
 
 import { FaSignInAlt, FaLock, FaMailBulk } from 'react-icons/fa';
 
@@ -9,8 +12,26 @@ import { Form } from '@unform/web';
 import Input from '../../components/Input';
 
 function Signin() {
-  const handleSubmit = useCallback(data => {
-    console.log(data);
+  const formRef = useRef(null);
+
+  const handleSubmit = useCallback(async data => {
+    try {
+      formRef.current?.setErrors({});
+
+      const schema = Yup.object().shape({
+        email: Yup.string()
+          .required('Email is required.')
+          .email('Type in a valid email.'),
+        password: Yup.string().required('Password is required.'),
+      });
+
+      await schema.validate(data, {
+        abortEarly: false,
+      });
+    } catch (err) {
+      const errors = getValidationErrors(err);
+      formRef.current?.setErrors(errors);
+    }
   }, []);
 
   return (
@@ -20,13 +41,8 @@ function Signin() {
         <span>Sign In</span>
       </h1>
 
-      <Form onSubmit={handleSubmit}>
-        <Input
-          icon={FaMailBulk}
-          name="email"
-          type="email"
-          placeholder="Email"
-        />
+      <Form ref={formRef} onSubmit={handleSubmit}>
+        <Input icon={FaMailBulk} name="email" placeholder="Email" />
         <Input
           icon={FaLock}
           name="password"
