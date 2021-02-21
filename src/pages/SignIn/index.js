@@ -11,7 +11,7 @@ import { Form } from '@unform/web';
 
 import Input from '../../components/Input';
 
-function Signin() {
+function SignIn() {
   const formRef = useRef(null);
 
   const handleSubmit = useCallback(async data => {
@@ -61,4 +61,4 @@ function Signin() {
   );
 }
 
-export default Signin;
+export default SignIn;

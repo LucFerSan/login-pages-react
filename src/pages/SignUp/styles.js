@@ -4,6 +4,7 @@ export const Container = styled.div`
   background: #29808c;
   width: 30rem;
   height: 35rem;
+  box-shadow: 5px 5px 24px -2px #000;
 
   h1 {
     background: #f0460e;
@@ -22,7 +23,6 @@ export const Container = styled.div`
 
   form {
     padding: 2rem;
-    margin-top: 2.5rem;
 
     button {
       margin: 0 auto;
@@ -40,7 +40,7 @@ export const Container = styled.div`
       background: #f0460e;
       color: white;
       box-shadow: 2px 2px 8px -2px #000;
-      transition: background 0.2 ease;
+      transition: background 0.2s ease;
     }
 
     button:hover {
