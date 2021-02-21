@@ -16,7 +16,7 @@
 
 ## About The Project
 
-![Login Pages React](.github/signup.png)
+![Login Pages React](.github/signup.gif)
 
 This is my first project with react, so I decided to build a simple login and register pages, just for the sake of practicing this technology.
 
