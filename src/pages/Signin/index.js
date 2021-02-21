@@ -5,6 +5,8 @@ import { FaSignInAlt, FaLock, FaMailBulk } from 'react-icons/fa';
 
 import { Container, InputContainer, Account } from './styles';
 
+import Input from '../../components/Input';
+
 function Signin() {
   return (
     <Container>
@@ -14,7 +16,7 @@ function Signin() {
       </h1>
 
       <form>
-        <InputContainer>
+        {/* <InputContainer>
           <FaMailBulk size={24} />
           <input
             required
@@ -23,9 +25,9 @@ function Signin() {
             id="email"
             placeholder="Email"
           />
-        </InputContainer>
+        </InputContainer> */}
 
-        <InputContainer>
+        {/* <InputContainer>
           <FaLock size={24} />
           <input
             required
@@ -34,7 +36,19 @@ function Signin() {
             id="password"
             placeholder="Password"
           />
-        </InputContainer>
+        </InputContainer> */}
+        <Input
+          icon={FaMailBulk}
+          name="email"
+          type="email"
+          placeholder="Email"
+        />
+        <Input
+          icon={FaLock}
+          name="password"
+          type="password"
+          placeholder="Password"
+        />
 
         <button type="submit">Sign in</button>
       </form>

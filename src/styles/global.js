@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Inter', sans-serif;
-    background: #1D7D8B;
+    background: #eee;
   }
 
   button {
