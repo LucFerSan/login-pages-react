@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
 import { FaSignInAlt, FaLock, FaMailBulk } from 'react-icons/fa';
 
-import { Container, InputContainer, Account } from './styles';
+import { Container, Account } from './styles';
+import { Form } from '@unform/web';
 
 import Input from '../../components/Input';
 
 function Signin() {
+  const handleSubmit = useCallback(data => {
+    console.log(data);
+  }, []);
+
   return (
     <Container>
       <h1>
@@ -15,28 +20,7 @@ function Signin() {
         <span>Sign In</span>
       </h1>
 
-      <form>
-        {/* <InputContainer>
-          <FaMailBulk size={24} />
-          <input
-            required
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-          />
-        </InputContainer> */}
-
-        {/* <InputContainer>
-          <FaLock size={24} />
-          <input
-            required
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Password"
-          />
-        </InputContainer> */}
+      <Form onSubmit={handleSubmit}>
         <Input
           icon={FaMailBulk}
           name="email"
@@ -51,7 +35,7 @@ function Signin() {
         />
 
         <button type="submit">Sign in</button>
-      </form>
+      </Form>
 
       <Account>
         <p>Don't have an account?</p>
