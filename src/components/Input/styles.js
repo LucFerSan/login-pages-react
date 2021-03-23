@@ -48,6 +48,7 @@ export const Container = styled.div`
 
   svg {
     margin-right: 1rem;
+    flex-shrink: 0;
   }
 
   @media (max-width: 767px) {
