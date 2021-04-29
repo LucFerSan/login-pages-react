@@ -64,4 +64,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Lucas Fernandes - fernandes.lucas11@outlook.com
 
-Project Link - live view: [https://react-first-lucas.netlify.app](https://react-first-lucas.netlify.app)
+Project Link - live view: [https://react-auth-lucas.netlify.app](https://react-auth-lucas.netlify.app)
